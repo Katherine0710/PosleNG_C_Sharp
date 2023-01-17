@@ -4,8 +4,17 @@
 // 6, 1, 33 -> [6, 1, 33]
 
 int[] array = new int[8];
+Console.Write("[");
 for (int i = 0; i < 8; i++)
 {
-    array[i] = new Random().Next();
-    Console.Write(array[i] + " ");
+    array[i] = new Random().Next(0,1000);
+
+    if (i < 7)
+    {
+        Console.Write(array[i] + ", ");
+    }    
+    else 
+    {
+        Console.Write(array[i] + "]");
+    }
 }
