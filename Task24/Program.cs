@@ -4,16 +4,16 @@
 
 Console.Write("Введите число а: ");
 int a = Convert.ToInt32(Console.ReadLine());
+int sum = Sum(a);
+Console.WriteLine("Сумма: " + sum);
 
 int Sum (int number)
 {
     int sum = 0;
-    for (int i = 1; i <= a; i++)
+    for (int i = 1; i <= number; i++)
     {
-        sum+=i;
+        sum+=i; //sum = sum + i ;
     }
     return sum;
 }
 
-int sum = Sum(a);
-Console.WriteLine("Сумма: " + sum);
