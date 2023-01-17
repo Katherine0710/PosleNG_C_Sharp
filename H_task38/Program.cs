@@ -13,20 +13,24 @@ for (int i = 0; i < 7; i++)
 
 double max = array[0];
 double min = array[0];
-for(int i = 1; i<7; i++)
-{
-    if (array[i]>max)
-    {
-        max = array[i];
-    }
-    if (array[i]<min)
-    {
-        min = array[i];
-    }
-}
-Console.WriteLine ();
-Console.WriteLine ("max: " + max);
-Console.WriteLine ("min: " + min);
 
-double razniza = max - min;
-Console.WriteLine ("Разница междду max и min: " + razniza);
+double MinMax (double[] arr)
+{
+    for(int i = 1; i<7; i++)
+    {
+        if (arr[i]>max)
+        {
+            max = arr[i];
+        }
+        if (arr[i]<min)
+        {
+            min = arr[i];
+        }
+    }
+    Console.WriteLine ("max: " + max);
+    Console.WriteLine ("min: " + min);
+    return max-min;
+}
+
+Console.WriteLine ();
+Console.WriteLine ("Разница между max и min: " + MinMax (array));
